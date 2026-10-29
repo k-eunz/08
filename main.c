@@ -5,20 +5,14 @@
 int main(void)
 {
     int i;
-    int grade[SIZE];
-    int score[SIZE];
-
-    for(i=0;i<SIZE;i++)
+    int a[SIZE] = {1,2,3,4,5};
+    int b[SIZE] = {1,1,3,5,5};
+    
+    for(i=0; i<SIZE; i++)
     {
-        grade[i] = rand() % 100;
-        printf("grade[%d] = %d\n", i, grade[i]);
+        if(a[i] != b[i])
+            printf("index %i different!\n", i);
     }
 
-    for(i=0;i<SIZE;i++)
-        score[i] = grade[i];
-
-    for (i = 0; i < SIZE; i++)
-        printf("score[%d] = %d\n", i, score[i]);
-
-    return 0;
+        return 0;
 }
